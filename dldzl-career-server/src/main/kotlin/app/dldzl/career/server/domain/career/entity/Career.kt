@@ -11,8 +11,6 @@ import java.util.UUID
 @Entity(name = "tbl_careers")
 class Career(
 
-    id: UUID,
-
     @ManyToOne
     @JoinColumn(
         name = "job_type_id",
@@ -22,4 +20,4 @@ class Career(
 
     @Column(length = 256)
     val title: String,
-) : BaseEntity(id = id)
+) : BaseEntity()
