@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service
 class CareerTypeService(
     @Autowired private val careerTypeJpaRepository: CareerTypeJpaRepository,
 ) {
-    fun createCareerType(name: String): CareerType = careerTypeJpaRepository.save(
+    fun createCareerType(title: String): CareerType = careerTypeJpaRepository.save(
         CareerType(
-            title = name,
+            title = title,
         ),
     )
 

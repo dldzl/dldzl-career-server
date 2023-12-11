@@ -20,8 +20,8 @@ class CareerTypeController(
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun createCareerType(
-        @RequestParam("name") name: String,
-    ): CareerTypeResponse = careerTypeService.createCareerType(name = name).toResponse()
+        @RequestParam("title") title: String,
+    ): CareerTypeResponse = careerTypeService.createCareerType(title = title).toResponse()
 
     @GetMapping
     fun getCareerTypes(): List<CareerTypeResponse> = careerTypeService.getAllCareerTypes().toResponse()

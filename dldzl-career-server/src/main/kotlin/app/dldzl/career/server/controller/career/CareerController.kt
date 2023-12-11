@@ -26,7 +26,7 @@ class CareerController(
         @RequestBody req: CreateCareerRequest,
     ): CareerResponse = careerService.createCareer(
         careerTypeId = req.careerTypeId,
-        name = req.name,
+        name = req.title,
     ).toResponse()
 
     @GetMapping

@@ -4,5 +4,5 @@ import java.util.UUID
 
 data class CreateCareerRequest(
     val careerTypeId: UUID,
-    val name: String,
+    val title: String,
 )
