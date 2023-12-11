@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/career-types")
+@RequestMapping("/v1/career-types")
 class CareerTypeController(
     @Autowired private val careerTypeService: CareerTypeService,
 ) {

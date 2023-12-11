@@ -12,7 +12,7 @@ data class CareerResponse(
 fun Career.toResponse(): CareerResponse = CareerResponse(
     id = this.id,
     careerTypeId = this.careerType.id,
-    name = this.name,
+    name = this.title,
 )
 
 fun List<Career>.toResponse(): List<CareerResponse> = this.map(Career::toResponse)

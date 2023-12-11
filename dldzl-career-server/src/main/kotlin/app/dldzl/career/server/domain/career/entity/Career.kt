@@ -9,13 +9,15 @@ import jakarta.persistence.Id
 import jakarta.persistence.JoinColumn
 import jakarta.persistence.ManyToOne
 import java.util.UUID
+import org.hibernate.annotations.UuidGenerator
 
 @Entity(name = "tbl_careers")
-data class Career(
+class Career(
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    val id: UUID = UUID(0, 0),
+    @UuidGenerator
+    val id: UUID = UUID.randomUUID(),
 
     @ManyToOne
     @JoinColumn(
@@ -25,5 +27,5 @@ data class Career(
     val careerType: CareerType,
 
     @Column(length = 256)
-    val name: String,
+    val title: String,
 )

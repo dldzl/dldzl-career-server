@@ -9,13 +9,13 @@ import java.util.UUID
 import org.hibernate.annotations.UuidGenerator
 
 @Entity(name = "tbl_career_types")
-data class CareerType(
+class CareerType(
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @UuidGenerator
-    val id: UUID = UUID(0, 0),
+    val id: UUID = UUID.randomUUID(),
 
     @Column(length = 128)
-    val name: String,
+    val title: String,
 )

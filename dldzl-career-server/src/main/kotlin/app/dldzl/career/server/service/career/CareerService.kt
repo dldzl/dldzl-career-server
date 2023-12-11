@@ -1,6 +1,5 @@
 package app.dldzl.career.server.service.career
 
-import app.dldzl.career.server.controller.career.model.CareerResponse
 import app.dldzl.career.server.domain.career.entity.Career
 import app.dldzl.career.server.domain.career.repository.CareerJpaRepository
 import app.dldzl.career.server.domain.careertype.repository.CareerTypeJpaRepository
@@ -24,7 +23,7 @@ class CareerService(
         return careerJpaRepository.save(
             Career(
                 careerType = careerType,
-                name = name,
+                title = name,
             ),
         )
     }

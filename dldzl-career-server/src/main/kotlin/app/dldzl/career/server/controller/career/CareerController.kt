@@ -32,7 +32,7 @@ class CareerController(
     @GetMapping
     fun getCareers(): List<CareerResponse> = careerService.getAllCareers().toResponse()
 
-    @GetMapping
+    @GetMapping("/id")
     fun getCareerById(
         @RequestParam(name = "career_id") careerId: UUID,
     ): CareerResponse? = careerService.getCareerById(id = careerId)?.toResponse()

@@ -13,7 +13,7 @@ class CareerTypeService(
 ) {
     fun createCareerType(name: String): CareerType = careerTypeJpaRepository.save(
         CareerType(
-            name = name,
+            title = name,
         ),
     )
 
